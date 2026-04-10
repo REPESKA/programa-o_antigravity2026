@@ -1,0 +1,68 @@
+/* Fonte Arial e cores: azuis, creme e branco */
+:root {
+    --azul-primario: #0056b3;
+    --azul-secundario: #007bff;
+    --creme: #fdfbf7;
+    --branco: #ffffff;
+    --borda-padrao: 7px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--creme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: var(--borda-padrao);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 5px solid var(--azul-primario);
+}
+
+h1 {
+    color: var(--azul-primario);
+}
+
+p {
+    color: #333;
+}
+
+button {
+    background-color: var(--azul-secundario);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--borda-padrao);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+}
+
+/* Efeito Fade para transições */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
