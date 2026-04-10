@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Base Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="opacity: 0;">
+    <header class="header">
+        <h1>Nova Aplicação</h1>
+        <p>Template gerado a partir do skill.md</p>
+    </header>
+    
+    <main class="container">
+        <section class="card">
+            <h2>Bem-vindo</h2>
+            <p>As diretrizes visuais estão aplicadas de forma abrangente:</p>
+            <ul>
+                <li><strong>Regra 1:</strong> Fonte Arial - Ativada via root variables no CSS.</li>
+                <li><strong>Regra 2:</strong> Paleta de cores (#3b234a, #523961, #bbafc4, #c3bbc9, #d4c7bf) baseando a aplicação.</li>
+                <li><strong>Regra 3:</strong> Arredondamento (border-radius) global de 7px.</li>
+                <li><strong>Regra 4:</strong> Fade (Esmaecimento) ao clicar e testar modais e botões, além do load na página.</li>
+                <li><strong>Regra 7:</strong> Vanilla (HTML + CSS + JS puros), sem dependências NPM requeridas.</li>
+            </ul>
+            <button class="btn" onclick="toggleElementFade('demonstration')">Exibir Animação (Fade)</button>
+        </section>
+
+        <!-- Elemento de para exibir o Fade transition-->
+        <section id="demonstration" class="card fade-hidden">
+            <h3>Demonstração da Transição</h4>
+            <p>Aparecimento suave de elementos coordenado pelo arquivo <code>script.js</code> seguindo os estilos programados no <code>style.css</code>!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

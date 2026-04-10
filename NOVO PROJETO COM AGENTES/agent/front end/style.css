@@ -1,0 +1,104 @@
+/* 
+    Regra 1: Fonte padrao da familia Arial.
+    Regra 2: Cores: #3b234a, #523961, #bbafc4, #c3bbc9, #d4c7bf.
+    Regra 3: Arredondamento de 7px.
+    Regra 4: Fade effect.
+*/
+
+:root {
+    --color-primary: #3b234a;       /* Dark Purple */
+    --color-secondary: #523961;     /* Lighter Purple */
+    --color-accent: #bbafc4;        /* Grayish Purple */
+    --color-light: #c3bbc9;         /* Lighter Grayish Purple */
+    --color-background: #d4c7bf;    /* Beige/Light background */
+    --border-radius: 7px;
+    --transition-speed: 0.4s;
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 2.5rem;
+    text-align: center;
+    border-bottom: 3px solid var(--color-secondary);
+    /* Geralmente cabeçalho toma tela toda, então não colocamos border-radius na parte de cima/baixo mas 
+       como a regra é "em todos os elementos" estritamente, deixaremos nos elementos contêiner .card e botões para não quebrar layout global,
+       mas seguindo o texto "em todos os elementos" estritamente: */
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background-color: #ffffff; /* Fundo branco para contraste ou podemos usar o color-light */
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: var(--border-radius); /* Regra 3 aplicada aos grandes elementos visuais */
+}
+
+.btn {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: var(--border-radius); /* Regra 3 aplicada */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+}
+
+img, input, textarea, select {
+    border-radius: var(--border-radius); /* Regra 3 aplicada */
+    border: 1px solid var(--color-secondary);
+    padding: 0.5rem;
+}
+
+/* Regra 4: Efeito de transição fade */
+.fade-in {
+    animation: fadeInAnimation var(--transition-speed) ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOutAnimation var(--transition-speed) ease-in-out forwards;
+}
+
+.fade-hidden {
+    display: none;
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutAnimation {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
+}
