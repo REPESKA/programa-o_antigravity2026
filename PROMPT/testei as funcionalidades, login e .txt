@@ -1,0 +1,17 @@
+testei as funcionalidades, login e cadastro, estão corretas
+porém preciso que você revise a erro quando iremos gravar a tarefa - Unexpected token '<', "<!DOCTYPE "... is not valid JSON, não consigo gravar a tarefa.
+
+Failed to load resource: the server responded with a status of 404 (Not Found)Understand this error
+kanban.js:55 Error: Falha ao buscar tarefas
+    at fetchTasks (kanban.js:50:32)
+fetchTasks @ kanban.js:55Understand this error
+api/tasks:1  Failed to load resource: the server responded with a status of 404 (Not Found)Understand this error
+api/tasks:1  Failed to load resource: the server responded with a status of 404 (Not Found)Understand this error
+api/tasks:1  Failed to load resource: the server responded with a status of 404 (Not Found)Understand this error
+api/tasks:1  Failed to load resource: the server responded with a status of 404 (Not Found)Understand this error
+kanban.js:42  GET http://localhost:3000/api/tasks 404 (Not Found)
+fetchTasks @ kanban.js:42
+(anonymous) @ kanban.js:37Understand this error
+kanban.js:55 Error: Falha ao buscar tarefas
+    at fetchTasks (kanban.js:50:32)
+

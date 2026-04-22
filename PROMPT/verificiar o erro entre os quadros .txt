@@ -1,0 +1,11 @@
+verificiar o erro entre os quadros do kanban, quando alteramos as categorias aparece um erro - Erro ao atualizar status
+Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+criar um botão para editar a tarefa, quando estiver salva
+
+
+
+
+
+verificiar o erro entre os quadros do kanban, quando alteramos as categorias para AFazer aparece um erro
+kanban.html:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this error
+api/tasks/03ae8de0-fd4d-4ded-ab50-1a829f9d46b6:1  Failed to load resource: the server responded with a status of 404 (Not Found)
